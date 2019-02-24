@@ -1,0 +1,32 @@
+# SirBot
+
+## Purpose
+
+Create our first lichess bot with:
+
+* https://lichess.org/api and
+
+* https://berserk.readthedocs.io/en/master/index.html
+
+## Setup
+```pip3 install virtualenv virtualenvwrapper```
+
+```mkvirtualenv sirbot```
+
+```workon sirbot```
+
+```pip3 install -r requirements.txt```
+
+## API
+
+### How to upgrade your account to a BOT? (POST)
+curl -d '' https://lichess.org/api/bot/account/upgrade -H "Authorization: Bearer FDnw1xUZo7hRkmPq"
+
+### How to find out current games playing? (GET)
+curl https://lichess.org/api/account/playing -H "Authorization: Bearer HRcZmlE3kTTIhLTg"
+
+### How to Make a move? (POST)
+curl -d '' https://lichess.org/api/bot/game/B5NcL74O/move/e2e4  -H "Authorization: Bearer HRcZmlE3kTTIhLTg"
+
+### How to find out incoming challenges? (GET)
+curl https://lichess.org/api/stream/event -H "Authorization: Bearer HRcZmlE3kTTIhLTg"
